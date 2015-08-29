@@ -35,6 +35,7 @@ class ReviewsController < ApplicationController
     end
   end
 
+
   private
     # Required for Edit/Update/Destroy actions
     def set_review
