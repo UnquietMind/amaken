@@ -46,5 +46,4 @@ class ReviewsController < ApplicationController
     def review_params
       params.require(:review).permit(:content, :place_id, :score)
     end
-    
 end
