@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150822070254) do
+ActiveRecord::Schema.define(version: 20150828144639) do
 
   create_table "places", force: :cascade do |t|
     t.string   "name"
@@ -30,8 +30,9 @@ ActiveRecord::Schema.define(version: 20150822070254) do
     t.integer  "place_id"
     t.integer  "user_id"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "score",      default: 0
   end
 
   create_table "users", force: :cascade do |t|

@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
       if @review.save
         format.html { redirect_to place_path(@review.place), notice: 'Review was successfully created.' }
       else
-        redirect_to place_path(@review.place), notice: "Something went wrong"
+        format.html { redirect_to place_path(@review.place), notice: "Something went wrong" }
       end
     end
   end
@@ -23,7 +23,7 @@ class ReviewsController < ApplicationController
       if @review.update(review_params)
         format.html { redirect_to place_path(@review.place), notice: 'Review was successfully updated.' }
       else
-        redirect_to place_path(@review.place), notice: "Something went wrong"
+        format.html { redirect_to place_path(@review.place), notice: "Something went wrong" }
       end
     end
   end
@@ -43,7 +43,7 @@ class ReviewsController < ApplicationController
 
     # Required for Create action
     def review_params
-      params.require(:review).permit(:content, :place_id)
+      params.require(:review).permit(:content, :place_id, :score)
     end
     
 end
