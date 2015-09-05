@@ -4,6 +4,7 @@ class ReviewsController < ApplicationController
     
     
   def edit
+    @place = @review.place
   end
 
   def create
